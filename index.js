@@ -8,6 +8,7 @@ const transporterRoutes = require("./routes/transporter.routes");
 const vehicleRoutes = require("./routes/vehicle.routes");
 const itemRoutes = require("./routes/item.routes");
 const shipmentRoutes = require("./routes/shipment.routes");
+const shipmentItemRoutes = require("./routes/shipmentItem.routes");
 const lookupRoutes = require("./routes/lookup.routes");
 const path = require("path");
 const app = express();
@@ -28,6 +29,7 @@ AppDataSource.initialize()
 app.use("/transporters", transporterRoutes);
 app.use("/items", itemRoutes);
 app.use("/shipments", shipmentRoutes);
+app.use("/shipmentItems", shipmentItemRoutes);
 app.use("/lookup", lookupRoutes);
 app.use("/vehicles", vehicleRoutes);
 
